@@ -4,10 +4,11 @@ const Fetch = () => {
   const [data, setData] = useState();
   useEffect(() => {
 
-    fetch("https://api.github.com/users/amarachi-nwokocha/repos?page=2")
+    fetch("https://api.github.com/users/OJEFAVOUR/repos")
       .then((res) => res.json())
       .then((res) => setData(res));
   }, []);
+  console.log("exam")
   console.log("DATA IS ----->>>>>", data);
 
   const navigate = useNavigate();
@@ -29,8 +30,7 @@ const Fetch = () => {
                   {i.name}
                 </p>
                 <p className="text-left mt-4 mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit
-                  facere.
+                last update: {i.updated_at}
                 </p>
                 <button
                   className="card-btn rounded-sm p-2 text-white bg-blue-300"

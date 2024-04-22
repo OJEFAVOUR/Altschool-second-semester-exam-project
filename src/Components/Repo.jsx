@@ -6,7 +6,8 @@ const Repo = () => {
   let location = useLocation();
   let data = location.pathname.slice(7);
   useEffect(() => {
-    fetch(`https://api.github.com/repos/amarachi-nwokocha/${data}`)
+    //fetch(`https://api.github.com/users/OJEFAVOUR/repos?page=$`)
+    fetch(`https://api.github.com/repos/OJEFAVOUR/${data}`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(`Failed to fetch data: ${res.status}`);
